@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    .content{
+        border-style:double;
+        display: inline-block;
+        margin: 30px;
+    }
+    .content2{
+        border-style:double;
+        display: inline-block;
+        margin: 30px;
+    }
+    .content3{
+        border-style:double;
+        display: inline-block;
+        margin: 30px;
+    }
+</style>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>Upload File to get the text</h1>
+
+    <p>Numbers of characters in the uploaded file</p>
+
+
+    <form action="/uploaded_ocr" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+</div>
+
+<div class="content2">
+    <h1>Upload File to get word count</h1>
+
+    <!-- <form action="/uploaded_WordCount" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Get_text">
+    </form>
+    <form action="/uploaded_WordCount" method="GET">
+        <input type="submit" value="Get_WordCount">
+    </form> -->
+
+    <form action="/uploaded_WordCount" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="upload">
+    </form>
+</div>
+
+<div class="content3">
+    <h1>Upload File to get clean data</h1>
+
+    <form action="/uploaded_CleanData" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="upload">
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,80 @@
+.contact-section {
+  padding-top: 90px!important;
+  padding-bottom: 90px!important;
+  min-height: 850px;
+  
+}
+
+section.contact-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.contact-section .clean_data{
+  background-color: rgba(196, 164, 132, 0.8);
+  text-align: center;
+  justify-content: center;
+  font-size: medium;
+  display: inline-block;
+  padding-left: 125px;
+  padding-right: 125px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.contact-section .clean_data .icn{
+  width: 119px;
+  height: 119px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  /* align-items: right; */
+  align-items: center;
+  /* text-transform: uppercase; */
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.contact-section .clean_data h1{
+  font-family: serif;
+  color: black ;
+  margin-bottom: 10px;
+}
+  .copy-button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #d8dde3a4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-text{
+  margin-left: 4px;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+
+.copy-button:active {
+  background-color: #003580;
+}
+
+
+.clipboard-icon {
+  margin-right: 8px;
+}

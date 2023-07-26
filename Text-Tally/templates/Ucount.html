@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/UploadCount.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}" type="text/css" /> 
+
+</head>
+<body>
+    <section class="gallery-section" id="section-3"> 
+        
+
+          <div class="container">
+              
+                 <div class = "word_count" >
+                      <div class="icn"><i class="far fa-2x fa-file"></i></div>
+                      <h1 class="h1"></n>-WORD COUNT-</n></h1>
+                      {% if Word_count %}
+                        <p class="text">{{ Word_count }}</p>
+                      {% else %}
+                        <p>No file selected.</p>
+                      {% endif %}
+                 </div>    
+                 
+          </div>
+    </section>
+
+      <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/slick.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
+  
+   
+</body>
+</html>

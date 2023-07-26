@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/UploadClean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}" type="text/css" /> 
+
+</head>
+<body>
+    <section class="contact-section section"  section parallax-window data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/bg-3.jpg') }}" id="section-4">
+        <div class="container">
+            <div class="clean_data">
+                <div class="icn"><i class="fas fa-2x fa-pen"></i></div> 
+                <h1>-CLEANED TEXT-</h1>
+                <div><button class="copy-button" onclick="copyToClipboard()"><i class="fas fa-1x fa-clipboard"></i> <span class="button-text">Copy Text</span></button></div>
+                {% if Clean_Data %}
+                <p id="extractedText">{{ Clean_Data }}</p>
+                {% else %}
+                <p>No file selected.</p>
+                {% endif %}
+                <form>
+                    <input type="text" id="tempInput" style="position: absolute; top: -9999px; left: -9999px;">
+                </form>
+            </div>
+             
+        </div>
+        
+    </section>
+
+    <script>
+        function copyToClipboard() {
+    var textToCopy = document.getElementById("extractedText").innerText;
+
+    // Create a temporary textarea to copy the text
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = textToCopy;
+
+    // Append the textarea to the document
+    document.body.appendChild(tempTextArea);
+
+    // Select the text in the textarea
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
+
+    // Optionally, provide feedback to the user that the text is copied (e.g., alert)
+    alert("Text copied to clipboard!");
+}
+
+
+</script>
+
+      <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/slick.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
+  
+   
+</body>
+</html>
